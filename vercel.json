@@ -1,0 +1,12 @@
+{
+    "version": 2,
+    "builds": [
+      {"src": "database/*.json", "use": "@vercel/static"},
+      {"src": "testbug/**", "use": "@vercel/static"}
+    ],
+    "routes": [
+      {"src": "/api/.*", "dest": "/database/:1"},
+      {"src": "/(.*)", "dest": "/testbug/index.html"}
+    ]
+  }
+  
